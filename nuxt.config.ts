@@ -6,6 +6,9 @@ export default defineNuxtConfig({
   srcDir: "./web",
   serverDir: "./server",
   content: {
+    preview: {
+      api: "https://api.nuxt.studio",
+    },
     experimental: { sqliteConnector: "native" },
   },
 });
