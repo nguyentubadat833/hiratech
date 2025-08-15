@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div class="mt-8">
-      <HeaderMenu />
-    </div>
-    <NuxtPage />
+    top
   </div>
 </template>
 

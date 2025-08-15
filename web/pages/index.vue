@@ -10,6 +10,7 @@ useSeoMeta({
 
 <template>
   <div>
+    <button class="btn">Default</button>
     <ContentRenderer v-if="home" :value="home" />
     <div v-else>Home not found</div>
   </div>
