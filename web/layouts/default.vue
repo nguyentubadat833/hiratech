@@ -11,7 +11,6 @@
 
 <script lang="ts" setup>
 
-
 // console.log(info.value)
 
 </script>

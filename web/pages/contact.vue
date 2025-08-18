@@ -2,24 +2,9 @@
   <div class="space-y-8">
     <div class="md:space-y-5 space-y-2 text-lg flex flex-col">
       <span class="md:text-3xl text-2xl font-bold text-orange-600">Thông Tin Liên Hệ</span>
-      <span>
-        Công ty:
-        <span class="text-orange-600">{{ info?.companyName }}</span>
-      </span>
-      <span>
-        Mã số thuế:
-        <span class="text-orange-600">{{ info?.taxIN }}</span>
-      </span>
-      <span>Địa chỉ:
-        <span class="text-orange-600">{{ info?.address }}</span>
-      </span>
-      <span>Hotline/Zalo:
-        <span class="text-orange-600" v-for="(value, index) in info?.phoneNumbers">
-          {{ value }}<span class="mx-2" v-if="index < info!.phoneNumbers!.length - 1">-</span>
-        </span>
-      </span>
-      <span>Email:
-        <span class="text-orange-600">{{ info?.email }}</span>
+      <span v-for="row in getinfoToRow()" class="flex md:flex-row flex-col">
+        <span class="w-32 inline-block">{{ row.label }}</span>
+        <span class="text-orange-600">{{ row.value }}</span>
       </span>
     </div>
     <form class="border bg-gray-50 space-y-5 p-5">
@@ -48,7 +33,7 @@
 </template>
 
 <script lang="ts" setup>
-type Info = {
+interface Info {
   companyName: string
   taxIN: string
   logUrl?: string | null
@@ -58,6 +43,13 @@ type Info = {
   email: string
 }
 
+
+interface InfoRow {
+  label: string,
+  value: string
+}
+
+
 const { data: info } = await useAsyncData(() => queryCollection("page").path('/info').first(), {
   transform(value) {
     return <Info>{
@@ -65,6 +57,32 @@ const { data: info } = await useAsyncData(() => queryCollection("page").path('/i
     }
   }
 })
+
+
+const getinfoToRow = (): InfoRow[] => {
+  return [
+    {
+      label: 'Công ty: ',
+      value: info.value!.companyName
+    }, {
+      label: 'Mã số thuế: ',
+      value: info.value!.taxIN
+    }, {
+      label: 'Địa chỉ: ',
+      value: info.value!.address
+    }, {
+      label: 'Hotline/Zalo: ',
+      value: info.value?.phoneNumbers
+        ? info.value.phoneNumbers.join(" — ")
+        : ""
+    }, {
+      label: 'Địa chỉ mail: ',
+      value: info.value!.email
+    }
+  ]
+}
+
+
 </script>
 
 <style></style>

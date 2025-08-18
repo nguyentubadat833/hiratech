@@ -1,6 +1,6 @@
 <template>
   <div class="bg-stone-700 h-16 px-2">
-    <div class="h-full xl:w-3/5 mx-auto flex justify-between">
+    <div class="h-full xl:w-3/5 mx-auto flex justify-between px-2">
       <div class="flex items-center hover:cursor-pointer" @click="navigateTo('/')">
         <span class="text-orange-600 md:text-3xl text-2xl font-extrabold">HIRATECH</span>
       </div>
@@ -11,7 +11,7 @@
           {{ item.name }}
         </span>
       </div>
-      <div class="md:hidden flex items-center mr-2">
+      <div class="md:hidden flex items-center">
         <div class="drawer drawer-end">
           <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
           <div class="drawer-content">
@@ -22,7 +22,7 @@
           </div>
           <div class="drawer-side">
             <label ref="closeDrawerEl" for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-            <div class="flex menu bg-stone-700 text-base-content min-h-full w-72 p-4">
+            <div class="flex menu bg-stone-800 text-base-content min-h-full w-72 p-4">
               <Icon name="heroicons:arrow-left-circle" class="text-3xl text-gray-50 active:text-orange-500 "
                 @click="closeDrawerEl?.click()" />
               <div class="flex flex-col flex-1 gap-2 mt-10">
@@ -46,15 +46,16 @@
 </template>
 
 <script lang="ts" setup>
-type Nav = {
-  menu: {
-    name: string,
-    path: string,
-    order: number
-  }[]
-}
+import type { Nav } from '#shared/types/web'
 
-const { data: nav } = await useAsyncData(() => queryCollection("page").path('/nav').first(), {
+// type Nav = {
+//   menu: {
+//     name: string,
+//     path: string,
+//   }[]
+// }
+
+const { data: nav } = await useAsyncData('getNavData', () => queryCollection("page").path('/nav').first(), {
   transform(value) {
     return <Nav>{
       ...value?.body

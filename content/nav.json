@@ -2,28 +2,23 @@
   "menu": [
     {
       "name": "Trang chủ",
-      "path": "/",
-      "order": 1
+      "path": "/"
     },
     {
       "name": "Dự án",
-      "path": "/projects",
-      "order": 2
+      "path": "/projects"
     },
     {
       "name": "Báo giá",
-      "path": "/pricing",
-      "order": 3
+      "path": "/pricing"
     },
     {
       "name": "Về chúng tôi",
-      "path": "/about",
-      "order": 4
+      "path": "/about"
     },
     {
       "name": "Liên hệ",
-      "path": "/contact",
-      "order": 5
+      "path": "/contact"
     }
   ]
 }
