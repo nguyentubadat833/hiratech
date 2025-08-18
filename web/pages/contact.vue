@@ -2,7 +2,10 @@
   <div class="space-y-8">
     <div class="md:space-y-5 space-y-2 text-lg flex flex-col">
       <span class="md:text-3xl text-2xl font-bold text-orange-600">Thông Tin Liên Hệ</span>
-      <span class="md:text-xl text-lg text-orange-600">{{ info?.companyName }}</span>
+      <span>
+        Công ty:
+        <span class="text-orange-600">{{ info?.companyName }}</span>
+      </span>
       <span>
         Mã số thuế:
         <span class="text-orange-600">{{ info?.taxIN }}</span>

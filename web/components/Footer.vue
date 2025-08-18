@@ -30,7 +30,7 @@
             <label>Nhập vào số điện thoại hoặc email của bạn, chúng tôi sẽ chủ động liên hệ lại ngay.</label>
             <div class="join w-full">
               <input type="text" placeholder="username@gmail.com" class="input input-bordered join-item" />
-              <button class="btn btn-primary join-item">Gửi yêu cầu</button>
+              <button class="btn btn-neutral join-item">Gửi yêu cầu</button>
             </div>
           </fieldset>
         </form>

@@ -25,7 +25,7 @@ const { data: home } = await useAsyncData(() => queryCollection('page').path('/'
           <div class="absolute inset-0 bg-black/40"></div>
           <div
             class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 space-y-2  md:space-y-6">
-            <span class="text-orange-400 text-2xl md:text-5xl font-bold leading-snug">
+            <span class="text-orange-400 text-2xl md:text-5xl font-extrabold leading-snug">
               XÂY DỰNG HIRATECH
             </span>
             <span class="text-lg md:text-3xl font-medium leading-snug">
