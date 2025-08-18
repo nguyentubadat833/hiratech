@@ -1,5 +1,8 @@
 import daisyui from "daisyui";
 
-export  default  {
-    plugins: [daisyui]
-}
+export default {
+  plugins: [daisyui],
+  theme: {
+    extend: {},
+  },
+};

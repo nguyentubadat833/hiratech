@@ -1,17 +1,26 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from "@tailwindcss/vite";
+// https://nuxt.com/docs/api/configuration/nuxt-config\
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ["@nuxt/content", "@nuxt/image", "@nuxtjs/tailwindcss"],
+  modules: [
+    "@nuxt/content",
+    "@nuxt/image",
+    "@nuxt/icon",
+    "@nuxtjs/tailwindcss",
+  ],
   srcDir: "./web",
   serverDir: "./server",
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: "layout", mode: "out-in" },
+  },
   content: {
     experimental: { sqliteConnector: "native" },
   },
-  // css: ["~/assets/css/tailwind.css"],
-  // vite: {
-  //   plugins: [tailwindcss()],
-  // },
+  image: {
+    imagekit: {
+      baseURL: "https://ik.imagekit.io/ntbdpro",
+    },
+  },
 });

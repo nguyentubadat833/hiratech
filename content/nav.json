@@ -1,0 +1,29 @@
+{
+  "menu": [
+    {
+      "name": "Trang chủ",
+      "path": "/",
+      "order": 1
+    },
+    {
+      "name": "Dự án",
+      "path": "/projects",
+      "order": 2
+    },
+    {
+      "name": "Báo giá",
+      "path": "/pricing",
+      "order": 3
+    },
+    {
+      "name": "Về chúng tôi",
+      "path": "/about",
+      "order": 4
+    },
+    {
+      "name": "Liên hệ",
+      "path": "/contact",
+      "order": 5
+    }
+  ]
+}

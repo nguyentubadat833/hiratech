@@ -1,6 +1,6 @@
 <template>
   <div>
-    top
+    about
   </div>
 </template>
 
