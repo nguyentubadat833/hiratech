@@ -1,8 +1,8 @@
 <template>
   <div class="space-y-8">
-    <div class="space-y-5 text-lg flex flex-col">
-      <span class="text-3xl font-bold text-orange-600">Thông Tin Liên Hệ</span>
-      <span class="text-xl text-orange-600">{{ info?.companyName }}</span>
+    <div class="md:space-y-5 space-y-2 text-lg flex flex-col">
+      <span class="md:text-3xl text-2xl font-bold text-orange-600">Thông Tin Liên Hệ</span>
+      <span class="md:text-xl text-lg text-orange-600">{{ info?.companyName }}</span>
       <span>
         Mã số thuế:
         <span class="text-orange-600">{{ info?.taxIN }}</span>
@@ -19,11 +19,11 @@
         <span class="text-orange-600">{{ info?.email }}</span>
       </span>
     </div>
-    <div class="border bg-gray-50 space-y-5 p-5">
+    <form class="border bg-gray-50 space-y-5 p-5">
       <span class="text-xl font-bold text-orange-600">Gửi Yêu Cầu Tư Vấn Miễn Phí</span>
       <p>Quý khách hàng hãy nhập thông tin bên dưới và gửi, chúng tôi sẽ phản hồi quý
         khách sớm nhất. Rất vui lòng khi nhận được ý kiến của quý khách!</p>
-      <div class="flex gap-4">
+      <div class="md:flex space-y-4 md:space-y-0 gap-4">
         <div class="space-y-4">
           <input type="text" placeholder="Họ và tên*..." class="input w-full" />
           <input type="text" placeholder="Số điện thoại*..." class="input w-full" />
@@ -40,7 +40,7 @@
       <div class="flex justify-end">
         <button class="btn bg-orange-500 text-white">Gửi yêu cầu</button>
       </div>
-    </div>
+    </form>
   </div>
 </template>
 

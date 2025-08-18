@@ -2,7 +2,7 @@
   <div>
     <div class="bg-stone-600">
       <footer
-        class="w-2/3 mx-auto flex justify-between footer sm:footer-horizontal text-base-content text-gray-200 p-10">
+        class="xl:w-3/5 mx-auto md:flex justify-between footer sm:footer-horizontal text-base-content text-gray-200 md:p-10 p-5">
         <nav>
           <h6 class="footer-title">Dịch vụ của chúng tôi</h6>
           <a class="link link-hover">Thi công xây dựng</a>
@@ -28,7 +28,7 @@
           <h6 class="footer-title">Liên hệ nhanh</h6>
           <fieldset class="w-80 space-y-3">
             <label>Nhập vào số điện thoại hoặc email của bạn, chúng tôi sẽ chủ động liên hệ lại ngay.</label>
-            <div class="join">
+            <div class="join w-full">
               <input type="text" placeholder="username@gmail.com" class="input input-bordered join-item" />
               <button class="btn btn-primary join-item">Gửi yêu cầu</button>
             </div>
